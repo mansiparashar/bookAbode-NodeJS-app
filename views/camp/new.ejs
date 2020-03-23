@@ -1,0 +1,30 @@
+
+
+
+<%- include("../partials/header") %>
+<div class="container">
+	<div class="row">
+	<h1 style="text-align:center">Do you have a recommendation?</h1><br>
+	<div style="width:40%; margin: 30px auto;">
+	<form action="/camp" method="POST">
+	<div class="form-group">
+		Book's Name <input class="form-control" type="text" name="book" placeholder="Enter the book name">
+		</div>
+		<div class="form-group">
+		cover <input class="form-control" type="text" placeholder="Enter the cover's URL" name="cover">
+		</div>
+		<div class="form-group">
+		Author's Name<input class="form-control" type="text" placeholder="Enter the Author's Name" name="author">
+		</div>
+		<div class="form-group">
+		Blurb<input class="form-control" type="text" placeholder="Enter the description" name="description">
+		</div>
+		<div class="form-group">
+		<button class="btn btn=lg btn-info btn-block"> Submit </button>
+	</div>
+	</form>
+	<a href="/camp">Go Back</a>
+	</div>
+</div>
+</div>
+<%- include("../partials/footer") %>

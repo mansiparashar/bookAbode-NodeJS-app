@@ -1,0 +1,45 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<p class="lead">bookAbode</p>
+			<div class="list-group">
+				<li class="list-group-item">Click to View on Amazon Books</li>
+				<li class="list-group-item">Click to download for your Kindle</li>
+				<li class="list-group-item">Click to read Online</li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				<img class="img-responsive" src="<%= camp.cover %>">
+				<div class="caption-full">
+				<h4 class="pull-right"></h4>
+				<h1><%= camp.book %> </h1>
+				<p><%= camp.description %></p>
+			</div>
+		</div>
+		<div class="well">
+			<div class="text-right">
+			<a class = "btn btn-success" href="/camp/<%= camp._id %>/comments/new">Leave a review</a>
+			</div>
+			<hr>
+				<% camp.comments.forEach(function(comment){ %>
+				<div class="row">
+					<div class="col-md-12">
+						<strong><%= comment.author.username %></strong>
+						<span class="pull-right"><%= comment.rating %></span>
+						<p><%= comment.text %></p>
+					</div>
+				</div>
+				<% }) %>
+		</div>
+	</div>
+</div>
+
+
+<p></p><b>
+<p>
+
+</p>
+
+<%- include("../partials/footer") %>

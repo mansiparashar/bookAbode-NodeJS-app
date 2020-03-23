@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+	<header class="jumbotron">
+	<div class="container">
+		<h1>Which book to read next? </h1>
+		<p>These are the recommendations</p>
+		<p><a class="btn btn-primary btn-lrg" href="/camp/new">Recommend a book</a></p>
+	</div>
+	</header>
+	<div class="row text-center" style="display:flex; flex-wrap;wrap;">
+		 <% camp.forEach(function(camp){ %>
+		 <div class="col-md-3 col-sm-6">
+				<div class="thumbnail">
+					<img src="<%= camp["cover"]%>">
+					<div class="caption">
+						<h4><b><%= camp["book"]%></b><br><%= camp["author"]%></h4>
+					</div>
+					<p><a href="/camp/<%= camp._id %>" class="btn btn-primary">More Info </a>
+					</p>
+				</div>
+		 </div>	
+
+		<% }); %>
+	</div>
+</div>
+	<%- include("../partials/footer") %>

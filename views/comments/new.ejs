@@ -1,0 +1,32 @@
+
+<%- include("../partials/header") %>
+	<div style="background-image: url(<%= camp["cover"] %>); background-repeat: no-repeat;  background-size: 600px 800px;">
+<div class="container">
+	<div class="row">
+	
+	
+	
+	
+	<div style="width:40%; margin-left:auto; margin-right:0; " >
+	<h1 style="text-align:center">Leave a Review for <br><br><i><b><%= camp["book"] %></b></i></h1><br>
+	<form action="/camp/<%= camp["_id"] %>/comments" method="POST">
+	<div class="float-right">
+
+			<div class="form-group">
+			Rating<input class="form-control" type="text" placeholder="Enter the rating out of 5" name="comment[rating]">
+			</div>
+			<div class="form-group">
+			Review<input class="form-control" type="text" placeholder="Your Review" name="comment[text]">
+			</div>
+			<div class="form-group">
+			<button class="btn btn=lg btn-info btn-block"> Submit </button>
+		</div>
+		</form>
+		
+		<a href="/camp">Go Back</a>
+		</div>
+	</div>
+</div>
+</div>
+
+<%- include("../partials/footer") %>
