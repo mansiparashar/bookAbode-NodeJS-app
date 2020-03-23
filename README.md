@@ -38,7 +38,7 @@ Reading is a habit I have had since ever, and after a point of time, I would fin
 - Grouping the dashboard based on genres
 - Personalized recommendation system for authorized users
 - Direct links for downloading epub format of the book
-- UI improvement for errors (using ** flash**)
+- UI improvement for errors (using **flash**)
 - General UI polishing
 
 
