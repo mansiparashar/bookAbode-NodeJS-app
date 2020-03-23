@@ -1,0 +1,76 @@
+body {
+  background-color: #000;
+}
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 100px;
+}
+#landing-header h1 {
+  color: #fff;
+  font-size: 100%;
+}
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://cdn.makespace.com/blog/wp-content/uploads/2018/03/29100759/organized-book-shelves-by-height.jpg);
+ 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://i.etsystatic.com/10722167/r/il/6fb392/1420732416/il_570xN.1420732416_3sr2.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://cdn.makespace.com/blog/wp-content/uploads/2018/03/29102219/book-spine-golden-page-edges-1600x715.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://i.ytimg.com/vi/pIago6ylKpc/hqdefault.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://miro.medium.com/max/4000/1*TXrf0-voftoOq359-ktWag.png);
+  animation-delay: 10s; 
+}
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
